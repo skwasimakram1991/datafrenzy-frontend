@@ -1,0 +1,138 @@
+<header [ngStyle]="{ display: hideHeader ? 'none' : 'block' }">
+  <div class="container-fluid">
+    <div class="content-wraper">
+      <div class="togglebtn" (click)="toggleNavbar()">
+        <div class="hamburger" id="hamburger-6">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="hd-right">
+        <h3>{{ headerContent }}</h3>
+        <div class="wraper">
+            @if(!hideSearchbar) {
+          <form action="">
+            <input type="search" name="" id="" placeholder="Search Jobs" />
+          </form>
+        }
+          <div class="profile">
+            <button
+              class="btn profile-button"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span><img src="assets/images/frame.svg" alt="" /></span>
+              <i class="fa fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/">Home</a></li>
+              <li>
+                <a class="dropdown-item" routerLink="/resume-boost"
+                  >AI ChatGPT Resume Boost</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/resume-builder"
+                  >Assignments</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/interview">Interviews</a>
+              </li>
+              <li><a class="dropdown-item" routerLink="/jobs">Jobs</a></li>
+              <li>
+                <a class="dropdown-item" routerLink="/job-match-choice"
+                  >My Job Match Choices</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="#?">Onboarding Info</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="#?">Notifications</a>
+              </li>
+              <li><a class="dropdown-item" routerLink="/login">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="left-part" [ngStyle]="{ display: hideHeader ? 'none' : 'block' }">
+  <div class="logo-wrap">
+    <a href="#"><img src="assets/images/logo.svg" alt="" /></a>
+  </div>
+  <div class="edit-box">
+    <h5>Dian Nugraha</h5>
+    <div class="select-dropdown">
+      <!-- href="#" role="button" data-value="" -->
+      <button
+        type="button"
+        class="btn select-dropdown__button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        data-bs-offset="10,20"
+      >
+        <span>Rapid Match Status </span>
+        <strong>Active </strong>
+      </button>
+      <!-- <ul class="dropdown-menu">
+                <li data-value="1"><a class="dropdown-item" href="#">Item 1</a></li>
+                <li data-value="2"><a class="dropdown-item" href="#">Item 2</a></li>
+                <li data-value="3"><a class="dropdown-item" href="#">Item 3</a></li>
+                <li data-value="4"><a class="dropdown-item" href="#">Item 4</a></li>
+            </ul> -->
+    </div>
+    <h6>
+      <a href="#?">Edit<img src="assets/images/edit.svg" alt="" /></a>
+    </h6>
+  </div>
+
+  <div class="menu-wrap">
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/job-match-choice"
+            ><img src="assets/images/i1.svg" alt="" />My job Match Choices</a
+          >
+        </li>
+        <li>
+          <a routerLink="/resume-boost"
+            ><img src="assets/images/i2.svg" alt="" />AI ChatGPT Resume Boost</a
+          >
+        </li>
+        <li>
+          <a routerLink="/jobs"
+            ><img src="assets/images/i3.svg" alt="" />Jobs</a
+          >
+        </li>
+        <li>
+          <a routerLink="/interview"
+            ><img src="assets/images/i4.svg" alt="" />Interviews</a
+          >
+        </li>
+
+        <li>
+          <a routerLink="/interview"
+            ><img src="assets/images/bld.svg" alt="" />Assignments
+          </a>
+        </li>
+        <li>
+          <a routerLink="/interview"
+            ><img src="assets/images/bld.svg" alt="" />Onboarding Info</a
+          >
+        </li>
+        <li>
+          <a routerLink="/interview"
+            ><img src="assets/images/bld.svg" alt="" />Notifications</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <img src="assets/images/lb.png" alt="" class="lb" />
+</div>
